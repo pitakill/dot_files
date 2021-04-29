@@ -1,0 +1,15 @@
+[user]
+	name = Leopoldo Caballero
+	email = git@pitakill.net
+	signingkey = 7625C35C0757416F
+[core]
+	excludesfile = ~/.gitignore_global
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[commit]
+	gpgsign = true
+	template = ~/.gitmessage
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
