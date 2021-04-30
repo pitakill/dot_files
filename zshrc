@@ -15,3 +15,4 @@ cdprojects(){cd ~/Projects/$1;}
 compctl -W ~/Projects -/ cdprojects
 
 alias vi="nvim"
+alias vim="vi"
