@@ -10,6 +10,7 @@ export LC_ALL="en_US.UTF-8"
 export EDITOR="nvim"
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
+export GPG_TTY=$(tty)
 
 cdprojects(){cd ~/Projects/$1;}
 compctl -W ~/Projects -/ cdprojects

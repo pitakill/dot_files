@@ -1,7 +1,7 @@
 [user]
 	name = Leopoldo Caballero
 	email = git@pitakill.net
-	signingkey = 7625C35C0757416F
+	signingkey = 2F962A3FFB186A7ECB138239B452CDAF56556FDC
 [core]
 	excludesfile = ~/.gitignore_global
 [alias]
