@@ -15,6 +15,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'preservim/nerdcommenter'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'leafgarland/typescript-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -192,6 +193,7 @@ set foldlevel=5
 set autoread
 set textwidth=80
 let &colorcolumn=join(range(81,999), ",")
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|dist'
 autocmd BufEnter *.go nmap <leader>t  <Plug>(go-test)
 autocmd BufEnter *.go nmap <leader>r  <Plug>(go-run)
 autocmd BufEnter *.go nmap <leader>tt <Plug>(go-test-func)
