@@ -1,4 +1,5 @@
 set nocompatible              " be iMproved, required
+lang en_US.UTF-8
 filetype off                  " required
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin("~/.config/nvim/bundle")
@@ -29,6 +30,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 
 let mapleader = ","
+set undofile
 " disable all linters as that is taken care of by coc.nvim
 let g:go_diagnostics_enabled = 0
 let g:go_metalinter_enabled = []
@@ -193,11 +195,12 @@ set foldlevel=5
 set autoread
 set textwidth=80
 let &colorcolumn=join(range(81,999), ",")
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|dist'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|dist\|coverage'
 autocmd BufEnter *.go nmap <leader>t  <Plug>(go-test)
 autocmd BufEnter *.go nmap <leader>r  <Plug>(go-run)
 autocmd BufEnter *.go nmap <leader>tt <Plug>(go-test-func)
 autocmd BufEnter *.go nmap <leader>c  <Plug>(go-coverage-toggle)
+autocmd BufEnter *.go nmap <leader>d  <Plug>(go-doc)
 autocmd BufEnter *.go nmap <leader>i  <Plug>(go-info)
 autocmd BufEnter *.go nmap <leader>ii <Plug>(go-implements)
 autocmd BufEnter *.go nmap <leader>ci <Plug>(go-describe)
@@ -238,3 +241,5 @@ let g:NERDTrimTrailingWhitespace = 1
 let g:NERDToggleCheckAllLines = 1
 vnoremap < <gv
 vnoremap > >gv
+
+noremap <Leader>bg :let &background = ( &background == "dark" ? "light" : "dark" )<CR>
